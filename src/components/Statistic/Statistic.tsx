@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import { IStatisticProps } from "./Statistic.types";
 
 const Statistic = (props: IStatisticProps) => {
-  const { name, color, quantityOrMostCommen, percent } = props;
+  const { name, color, detail, percentage } = props;
 
   return (
     <Box display={"flex"} justifyContent={"space-between"} marginTop={1}>
@@ -11,7 +11,7 @@ const Statistic = (props: IStatisticProps) => {
         {color && <Box marginLeft={0.5} bgcolor={color} height={8} width={8} />}
       </Box>
       <Box display={"flex"} justifyContent={"space-between"}>
-        <Typography variant={"caption"}>{quantityOrMostCommen}</Typography>
+        <Typography variant={"caption"}>{detail}</Typography>
         <Typography
           display={"flex"}
           justifyContent={"flex-end"}
@@ -19,9 +19,9 @@ const Statistic = (props: IStatisticProps) => {
           color={"gray"}
           paddingLeft={2}
           width={36}
-          visibility={percent === undefined ? "hidden" : "unset"}
+          visibility={percentage === undefined ? "hidden" : "unset"}
         >
-          {`${percent}%`}
+          {`${percentage}%`}
         </Typography>
       </Box>
     </Box>
