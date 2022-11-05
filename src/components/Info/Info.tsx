@@ -8,7 +8,9 @@ const Info = (props: IInfoProps) => {
 
   return (
     <Fragment>
-      <Typography variant={"h5"}>{title}</Typography>
+      <Typography variant={"h6"} fontWeight={"bold"}>
+        {title}
+      </Typography>
       <Typography>{description}</Typography>
       {uniqueValues ? (
         <Box marginTop={4}>
