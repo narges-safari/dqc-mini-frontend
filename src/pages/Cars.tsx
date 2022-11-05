@@ -1,15 +1,18 @@
 import { Box, Grid } from "@mui/material";
 import Info from "../components/Info/Info";
-import CarsData from "../assets/data/data.json";
+import carsJson from "../assets/data/data.json";
 import Statistic from "../components/Statistic/Statistic";
 import { useCars } from "./Car.biz";
+import { CarData } from "./Cars.types";
+
+const carsData: CarData[] = carsJson;
 
 const Cars = () => {
   const { colorRender } = useCars();
 
   return (
     <Box margin={3} borderRadius={4} padding={3}>
-      {CarsData.map((item) => (
+      {carsData.map((item: CarData) => (
         <Grid
           container
           spacing={3}
