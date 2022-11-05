@@ -8,7 +8,7 @@ import { CarData } from "./Cars.types";
 const carsData: CarData[] = carsJson;
 
 const Cars = () => {
-  const { colorRender } = useCars();
+  const { colorRender, findMaxName } = useCars();
 
   return (
     <Box margin={3} borderRadius={4} padding={3}>
@@ -30,7 +30,12 @@ const Cars = () => {
             />
           </Grid>
           <Grid item xs={7} display={"flex"} flexDirection={"column"}>
-            <Box width={"100%"} height={8} bgcolor={"#00c58d"} marginTop={3} />
+            <Box
+              width={"100%"}
+              height={8}
+              bgcolor={colorRender(findMaxName(item.statistics))}
+              marginTop={3}
+            />
             {item.statistics.map((sts) => (
               <Statistic
                 name={sts.name}
