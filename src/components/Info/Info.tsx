@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import { Box, Typography } from "@mui/material";
-import { Cars, IInfoProps } from "./Info.types";
+import { IInfoProps } from "./Info.types";
+import { Cars } from "../../pages/Cars.types";
 
 const Info = (props: IInfoProps) => {
   const { title, description, cars, uniqueValues } = props;

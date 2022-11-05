@@ -1,12 +1,8 @@
+import { Cars } from "../../pages/Cars.types";
+
 export interface IInfoProps {
   title: string;
-  cars?: Cars[];
   description: string;
+  cars?: Cars[];
   uniqueValues?: number;
-}
-
-export interface Cars {
-  name: string;
-  percentage: number;
-  disable: boolean;
 }
