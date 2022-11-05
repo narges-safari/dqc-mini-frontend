@@ -12,8 +12,9 @@ const Cars = () => {
 
   return (
     <Box margin={3} borderRadius={4} padding={3}>
-      {carsData.map((item: CarData) => (
+      {carsData.map((item: CarData, index: number) => (
         <Grid
+          key={index}
           container
           spacing={3}
           paddingBottom={2}
@@ -36,8 +37,9 @@ const Cars = () => {
               bgcolor={colorRender(findMaxName(item.statistics))}
               marginTop={3}
             />
-            {item.statistics.map((sts) => (
+            {item.statistics.map((sts, index: number) => (
               <Statistic
+                key={index}
                 name={sts.name}
                 color={colorRender(sts.name)}
                 detail={sts.detail}

@@ -20,8 +20,13 @@ const Info = (props: IInfoProps) => {
           <Typography fontWeight={"bold"}>Unique Values</Typography>
         </Box>
       ) : (
-        cars?.map((item: Cars) => (
-          <Box display={"flex"} justifyContent={"space-between"} marginTop={2}>
+        cars?.map((item: Cars, index: number) => (
+          <Box
+            key={index}
+            marginTop={2}
+            display={"flex"}
+            justifyContent={"space-between"}
+          >
             <Typography
               variant={"subtitle2"}
               color={item.disable ? "gray" : "inherit"}
