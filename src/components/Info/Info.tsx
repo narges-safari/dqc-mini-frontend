@@ -1,27 +1,23 @@
 import { Fragment } from "react";
 import { Box, Typography } from "@mui/material";
-import { IInfoProps } from "./Info.types";
-
-const data = [
-  { name: "FORD", percent: 9, disable: false },
-  { name: "CHEVROLET", percent: 8, disable: false },
-  { name: "Other", percent: 83, disable: true },
-];
+import { Cars, IInfoProps } from "./Info.types";
 
 const Info = (props: IInfoProps) => {
-  const { title, description, uniqueValues } = props;
+  const { title, description, cars, uniqueValues } = props;
 
   return (
     <Fragment>
       <Typography variant={"h5"}>{title}</Typography>
       <Typography>{description}</Typography>
       {uniqueValues ? (
-        <Box>
-          <Typography color={"blue"}>2053</Typography>
+        <Box marginTop={4}>
+          <Typography variant={"h4"} fontWeight={"bold"} color={"#0098de"}>
+            {uniqueValues}
+          </Typography>
           <Typography fontWeight={"bold"}>Unique Values</Typography>
         </Box>
       ) : (
-        data.map((item) => (
+        cars?.map((item: Cars) => (
           <Box display={"flex"} justifyContent={"space-between"} marginTop={2}>
             <Typography
               variant={"subtitle2"}
@@ -31,7 +27,7 @@ const Info = (props: IInfoProps) => {
             </Typography>
             <Typography
               color={item.disable ? "gray" : "blue"}
-            >{`${item.percent}%`}</Typography>
+            >{`${item.percentage}%`}</Typography>
           </Box>
         ))
       )}
