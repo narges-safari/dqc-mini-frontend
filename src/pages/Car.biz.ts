@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import { boxColorDictionary } from "./Car.const";
 import { Statistics } from "./Cars.types";
 
@@ -7,7 +8,7 @@ export const useCars = () => {
   };
 
   //This function returns the name of the property with the larget percentage
-  const findMaxName = (_statistics: Statistics[]) => {
+  const findMaxName = useCallback((_statistics: Statistics[]) => {
     const percentageArray: number[] = [];
     _statistics.map((item) =>
       percentageArray.push(
@@ -17,7 +18,7 @@ export const useCars = () => {
     const maxPercantage = Math.max(...percentageArray);
     return _statistics.find((item) => item.percentage === maxPercantage)
       ?.name as string;
-  };
+  }, []);
 
   return { colorRender, findMaxName };
 };
