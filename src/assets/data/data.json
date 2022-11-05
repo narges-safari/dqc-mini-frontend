@@ -1,0 +1,25 @@
+[
+  {
+    "title": "Make",
+    "description": "Company of the vehicle",
+    "cars": [
+      { "name": "FORD", "percentage": 9 },
+      { "name": "CHEVROLET", "percentage": 8 },
+      { "name": "Other", "percentage": 83 }
+    ]
+  },
+  {
+    "title": "Model",
+    "description": "Car model",
+    "uniqueValues": 2053
+  },
+  {
+    "title": "Vehicle Class",
+    "description": "Class of vehicle depending on utility, capacity and weight",
+    "cars": [
+      { "name": "SUV - SMALL", "percentage": 16 },
+      { "name": "MID - SIZE", "percentage": 15 },
+      { "name": "Other", "percentage": 69 }
+    ]
+  }
+]
