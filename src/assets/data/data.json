@@ -3,23 +3,52 @@
     "title": "Make",
     "description": "Company of the vehicle",
     "cars": [
-      { "name": "FORD", "percentage": 9 },
-      { "name": "CHEVROLET", "percentage": 8 },
-      { "name": "Other", "percentage": 83 }
+      { "name": "FORD", "percentage": 9, "disable": false },
+      { "name": "CHEVROLET", "percentage": 8, "disable": false },
+      { "name": "Other", "percentage": 83, "disable": true }
+    ],
+    "statistics": [
+      { "name": "Valid", "detail": "7385", "percentage": 100 },
+      { "name": "Mismatched", "detail": "0", "percentage": 0 },
+      { "name": "Missing", "detail": "0", "percentage": 0 },
+      { "name": "Unique", "detail": "42" },
+      { "name": "Most Common", "detail": "FORD", "percentage": 9 }
     ]
   },
   {
     "title": "Model",
     "description": "Car model",
-    "uniqueValues": 2053
+    "uniqueValues": 2053,
+    "statistics": [
+      { "name": "Valid", "detail": "7385", "percentage": 100 },
+      { "name": "Mismatched", "detail": "0", "percentage": 0 },
+      { "name": "Missing", "detail": "0", "percentage": 0 },
+      { "name": "Unique", "detail": "2053" },
+      {
+        "name": "Most Common",
+        "detail": "F-150 FFV",
+        "percentage": 0
+      }
+    ]
   },
   {
     "title": "Vehicle Class",
     "description": "Class of vehicle depending on utility, capacity and weight",
     "cars": [
-      { "name": "SUV - SMALL", "percentage": 16 },
-      { "name": "MID - SIZE", "percentage": 15 },
-      { "name": "Other", "percentage": 69 }
+      { "name": "SUV - SMALL", "percentage": 16, "disable": false },
+      { "name": "MID - SIZE", "percentage": 15, "disable": false },
+      { "name": "Other", "percentage": 69, "disable": true }
+    ],
+    "statistics": [
+      { "name": "Valid", "detail": "7385", "percentage": 100 },
+      { "name": "Mismatched", "detail": "0", "percentage": 0 },
+      { "name": "Missing", "detail": "0", "percentage": 0 },
+      { "name": "Unique", "detail": "16" },
+      {
+        "name": "Most Common",
+        "detail": "SUV - SMALL",
+        "percentage": 16
+      }
     ]
   }
 ]
