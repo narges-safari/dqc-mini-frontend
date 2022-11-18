@@ -8,7 +8,7 @@ import { CarData } from "./Cars.types";
 const carsData: CarData[] = carsJson;
 
 const Cars = () => {
-  const { colorRender, findMaxName } = useCars();
+  const { findColorHandler, findMaxPercentageName } = useCars();
 
   return (
     <Box margin={3} borderRadius={4} padding={3}>
@@ -34,14 +34,14 @@ const Cars = () => {
             <Box
               width={"100%"}
               height={8}
-              bgcolor={colorRender(findMaxName(item.statistics))}
+              bgcolor={findColorHandler(findMaxPercentageName(item.statistics))}
               marginTop={3}
             />
             {item.statistics.map((sts, index: number) => (
               <Statistic
                 key={index}
                 name={sts.name}
-                color={colorRender(sts.name)}
+                color={findColorHandler(sts.name)}
                 detail={sts.detail}
                 percentage={sts.percentage}
               />
