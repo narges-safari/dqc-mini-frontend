@@ -3,12 +3,12 @@ import { boxColorDictionary } from "./Car.const";
 import { Statistics } from "./Cars.types";
 
 export const useCars = () => {
-  const colorRender = (_name: string) => {
+  const findColorHandler = (_name: string) => {
     return boxColorDictionary.find((item) => item.name === _name)?.color;
   };
 
   //This function returns the name of the property with the larget percentage
-  const findMaxName = useCallback((_statistics: Statistics[]) => {
+  const findMaxPercentageName = useCallback((_statistics: Statistics[]) => {
     const percentageArray: number[] = [];
     _statistics.map((item) =>
       percentageArray.push(
@@ -20,5 +20,5 @@ export const useCars = () => {
       ?.name as string;
   }, []);
 
-  return { colorRender, findMaxName };
+  return { findColorHandler, findMaxPercentageName };
 };
